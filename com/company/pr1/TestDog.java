@@ -1,4 +1,6 @@
-package com.company;
+package com.company.pr1;
+
+import com.company.pr1.Dog;
 
 public class TestDog {
     public static void main(String[] args) {

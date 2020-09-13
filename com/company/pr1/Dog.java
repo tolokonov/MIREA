@@ -1,4 +1,4 @@
-package com.company;
+package com.company.pr1;
 import java.lang.*;
 
 class Dog {

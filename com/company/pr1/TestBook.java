@@ -1,4 +1,6 @@
-package com.company;
+package com.company.pr1;
+
+import com.company.pr1.Book;
 
 public class TestBook {
     public static void main(String[] args) {

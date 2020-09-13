@@ -1,4 +1,4 @@
-package com.company;
+package com.company.pr1;
 
 class Book {
     private String author;

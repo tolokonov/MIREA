@@ -2,8 +2,6 @@ package com.company.pr4;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Label extends JFrame {
     int MilanScore = 0, MadridScore = 0;

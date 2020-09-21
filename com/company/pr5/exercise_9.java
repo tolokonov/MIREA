@@ -1,4 +1,4 @@
-package com.company;
+package com.company.pr5;
 
 class exercise_9 {
 

@@ -1,4 +1,4 @@
-package com.company;
+package com.company.pr5;
 
 class exercise_7 {
     public static void recursion (int n, int k){

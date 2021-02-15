@@ -1,6 +1,6 @@
 import math
 
-def func(n):
+def 14(n):
   if (n==0):
     return 5
-  return math.tan(func(n-1)) + math.tan(func(n-1)) - 61
+  return math.tan(14(n-1)) + math.tan(14(n-1)) - 61

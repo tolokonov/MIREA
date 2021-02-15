@@ -30,4 +30,4 @@ def f13(n, m):
 def f14(n):
   if (n==0):
     return 5
-  return math.tan(14(n-1)) + math.tan(14(n-1)) - 61
+  return math.tan(f14(n-1)) + math.tan(f14(n-1)) - 61

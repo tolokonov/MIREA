@@ -1,5 +1,5 @@
 import math
-def fun(n, m):
+def f13(n, m):
   result = 0
   i = 1
   j = 1

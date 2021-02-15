@@ -10,4 +10,4 @@ def 12(x):
   elif (x >= 62 and x < 91):
     return 92 * (67 * x**8 + math.fabs(x) + 32) + math.tan(x)
   else:
-    return x**8 + math.log(x) + 24 
+    return x**8 + math.log(x) + 24

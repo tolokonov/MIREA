@@ -1,6 +1,6 @@
 import math
 
-def fu(x):
+def 12(x):
   if (x < -34):
     return x**3 + 24 * x - 51
   elif (x >= -34 and x < 46):

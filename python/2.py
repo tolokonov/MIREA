@@ -26,3 +26,27 @@ def f21(x):
         return 9
     else:
       return 10
+
+def f22(x):
+  q = str(bin(x))
+  if (len(q) == 34):
+    c = q[2:6]
+    b = q[6:18]
+    a = q[18:34]
+    h = c + a + b
+  elif (len(q) == 33):  
+    c = q[2:5]
+    b = q[5:17]
+    a = q[17:33]
+    h = c + a + b
+  elif (len(q) == 32):
+    c = q[2:4]
+    b = q[4:16]
+    a = q[16:32]
+    h = c + a + b
+  elif (len(q) == 31):
+    c = q[2:3]
+    b = q[3:15]
+    a = q[15:31]
+    h = c + a + b  
+  return hex(int(h, 2))    

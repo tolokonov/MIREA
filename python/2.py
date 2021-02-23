@@ -27,29 +27,23 @@ def f21(x):
     else:
       return 10
 
+def swapBits(x, p1, p2, n):
+  set1 =  (x >> p1) & ((1 << n) - 1)
+  set2 =  (x >> p2) & ((1 << n) - 1)
+ 
+  xor = (set1 ^ set2)
+  xor = (xor << p1) | (xor << p2)
+
+  result = x ^ xor
+  return result
+ 
 def f22(x):
-  q = str(bin(x))
-  if (len(q) == 34):
-    c = q[2:6]
-    b = q[6:18]
-    a = q[18:34]
-    h = c + a + b
-  elif (len(q) == 33):  
-    c = q[2:5]
-    b = q[5:17]
-    a = q[17:33]
-    h = c + a + b
-  elif (len(q) == 32):
-    c = q[2:4]
-    b = q[4:16]
-    a = q[16:32]
-    h = c + a + b
-  elif (len(q) == 31):
-    c = q[2:3]
-    b = q[3:15]
-    a = q[15:31]
-    h = c + a + b  
-  return hex(int(h, 2))
+  res = swapBits(x, 0, 16, 16)
+  res = swapBits(res, 12, 16, 4)
+  res = swapBits(res, 16, 20, 4)
+  res = swapBits(res, 20, 24, 4)
+  res = swapBits(res, 24, 28, 4)
+  return hex(res)
 
 def f23(a):
   new_a = []

@@ -27,23 +27,47 @@ def f21(x):
     else:
       return 10
 
-def swapBits(x, p1, p2, n):
-  set1 =  (x >> p1) & ((1 << n) - 1)
-  set2 =  (x >> p2) & ((1 << n) - 1)
+def f22(x):
+  set1 = (x >> 0) & ((1 << 16) - 1)
+  set2 = (x >> 16) & ((1 << 16) - 1)
  
   xor = (set1 ^ set2)
-  xor = (xor << p1) | (xor << p2)
+  xor = (xor << 0) | (xor << 16)
 
-  result = x ^ xor
-  return result
+  x = x ^ xor
+
+  set1 = (x >> 12) & ((1 << 4) - 1)
+  set2 = (x >> 16) & ((1 << 4) - 1)
  
-def f22(x):
-  res = swapBits(x, 0, 16, 16)
-  res = swapBits(res, 12, 16, 4)
-  res = swapBits(res, 16, 20, 4)
-  res = swapBits(res, 20, 24, 4)
-  res = swapBits(res, 24, 28, 4)
-  return hex(res)
+  xor = (set1 ^ set2)
+  xor = (xor << 12) | (xor << 16)
+
+  x = x ^ xor
+
+  set1 = (x >> 16) & ((1 << 4) - 1)
+  set2 = (x >> 20) & ((1 << 4) - 1)
+ 
+  xor = (set1 ^ set2)
+  xor = (xor << 16) | (xor << 20)
+
+  x = x ^ xor
+
+  set1 = (x >> 20) & ((1 << 4) - 1)
+  set2 = (x >> 24) & ((1 << 4) - 1)
+ 
+  xor = (set1 ^ set2)
+  xor = (xor << 20) | (xor << 24)
+
+  x = x ^ xor
+
+  set1 = (x >> 24) & ((1 << 4) - 1)
+  set2 = (x >> 28) & ((1 << 4) - 1)
+ 
+  xor = (set1 ^ set2)
+  xor = (xor << 24) | (xor << 28)
+
+  x = x ^ xor
+  return x
 
 def f23(a):
   new_a = []
@@ -53,7 +77,7 @@ def f23(a):
   new_c = []
   for item in new_a:
     for item_1 in item:
-      if item_1 != 'None':
+      if item_1 != None:
         new_b.append(item_1)
     new_c.append(new_b)
     new_b = []    
